@@ -70,5 +70,9 @@ wire [5:0] load_value = sw[15:10];      //Set Timer Value (Value to load in time
     .state(timer_count)
 );
 
-
+assign led[8:3] = stopwatch_count;
+assign led[15:10] = timer_count;
+assign led[2:0] = 3'b000;
+assign led[9] = 1'b0;
+    
 endmodule
